@@ -11,4 +11,6 @@ accountEmail ="test" // Allowed //
 // Avoid the use of var 
 
 console.table([BankId,accountEmail,accountPassword,accountCity,accountState]);
+
+// Container config done
  
