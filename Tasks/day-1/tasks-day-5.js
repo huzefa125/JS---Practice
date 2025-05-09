@@ -49,9 +49,41 @@ console.log(arr('absddx'));
 
 // Activity 4: Function Parameters and Default Values
 // Task 7: Ek function banao jo do parameters le aur unka product return kare. Dusre parameter ke liye ek default value do.
+const arrow = (num1,num2) =>{
+    return num1*num2
+}
+console.log(arrow(77,87));
 
 // Task 8: Ek function banao jo kisi person ka naam aur age le aur greeting message return kare. Age ke liye ek default value do.
+const greeting = (name,age) => {
+    return `Hello ${name} and your age is ${age}`
+}
+console.log(greeting("huzefa",71));
 
 // Activity 5: Higher-Order Functions
 // Task 9: Ek higher-order function banao jo ek function aur ek number le aur us function ko utni baar call kare jitna number diya ho.
+function Highlight(func,n){
+    for (let i = 0; i < n; i++) {
+        func();
+    }
+}
+
+function greet(){
+    console.log("hello guys");
+}
+Highlight(greet,6)
 // Task 10: Ek higher-order function banao jo do functions aur ek value le, pehle function ko value par apply kare, phir dusre function ko result par apply kare.
+function processTwoFunctions(func1, func2, value){
+    const result1 = func1(value)
+    const result2 = func2(result1)
+    return result2
+}
+function double(x){
+    return x * 2
+}
+function square(y){
+    return y * y
+
+}
+const resultAns = processTwoFunctions(double,square,6)
+console.log(resultAns);
