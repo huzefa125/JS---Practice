@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Info Display</title>
+  <style>
+    body {
+      background: #f0f4f8;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .color {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 15px 20px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      font-size: 18px;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    td {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="insert">
+    <div class="color">
+      <p>Press any key to see the details here...</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
