@@ -1,13 +1,13 @@
 function setUsername(username){
     this.username = username;
-    console.log("called")
+    console.log("called");
 }
 
-function createUser(email,password){
-    setUsername.call(username)
+function createUser(username, email, password){
+    setUsername.call(this, username);
 
-    this.email = email
-    this.password = password
+    this.email = email;
+    this.password = password;
 }
-const chai = new createUser("chai","huzefa@gmail.com","123")
-console.log(chai)
+const chai = new createUser("chai", "huzefa@gmail.com", "123");
+console.log(chai);
