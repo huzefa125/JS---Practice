@@ -22,6 +22,22 @@
                 <li>Item A</li>
                 <li>Item B</li>
             </ul>
+        <div id="hello">Hello</div>
+
+        <p id="mytext">Before Click</p>
+        <button id="mybtn">Click me</button>
+        <script>
+            document.getElementById('mybtn').addEventListener('click',function(){
+                document.getElementById('mytext').textContent ="After click"
+            })
+        </script>
+
+        <div id="hoverBox" style="width:100px; height:100px; border:1px solid black;"></div>
+        <script>
+            document.getElementById('hoverBox').addEventListener('mouseover',function () {
+                this.style.borderColor = "red"
+            })
+        </script>
 </body>
 <script>
     const select = document.getElementById('myPara').textContent= "newContect"
@@ -36,5 +52,8 @@
     ele.remove()
     let ul = document.getElementById('list2');
     ul.removeChild(ul.lastElementChild)
+    let box = document.getElementById('hello')
+    box.classList.add('highlight')
+    box.classList.remove('highlight')
 </script>
 </html>
