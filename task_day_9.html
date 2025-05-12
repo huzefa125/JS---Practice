@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- //Task 1: ID se select karna aur text change karna -->
+    <p id="myPara">Old Text</p>
+     <!-- Task 2: Class se select karna aur background color change karna -->
+      <p class="bg">Backgroud color change karna </p>
+      <!--  Task 3: Naya div create karke body me add karna -->
+        <!--  Task 6: Specific element ka last child remove karna -->
+        <ul id="myitem">
+            <li>Item 1</li>
+        </ul>
+        <!-- ✅ Task 5: Element select karke DOM se remove karna -->
+         <p id="remove">Remove This paragrag</p>
+         <!--  Task 6: Specific element ka last child remove karna -->
+           <ul id="list2">
+                <li>Item A</li>
+                <li>Item B</li>
+            </ul>
+</body>
+<script>
+    const select = document.getElementById('myPara').textContent= "newContect"
+    const bg = document.getElementsByClassName('bg')[0].style.backgroundColor = "red"
+    let newDiv = document.createElement('div');
+    newDiv.textContent = "New div is created"
+    document.body.appendChild(newDiv)
+    let newItem = document.createElement('li');
+    newItem.textContent = "item - 2"
+    document.getElementById('myitem').appendChild(newItem)
+    let ele = document.getElementById('remove')
+    ele.remove()
+    let ul = document.getElementById('list2');
+    ul.removeChild(ul.lastElementChild)
+</script>
+</html>
