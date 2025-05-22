@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- //task -1 -->
+    <p id="para"> idLorem ipsum dolor sit amet consectetur adipisicing elit. Natus unde quasi perspiciatis non ad tenetur, dolores distinctio officia, nihil mollitia porro. Placeat similique nobis nostrum blanditiis veritatis, quaerat illo dolore.
+    Nostrum libero, ex earum voluptas iure suscipit tenetur unde quod aut cupiditate rerum! Amet eum vel libero autem sit aspernatur nobis doloribus neque provident velit. Eius rem itaque voluptatem nam!
+    Perspiciatis totam fuga commodi animi atque. Reiciendis eveniet porro repellat! Blanditiis ad iure laboriosam amet a neque cupiditate alias, maiores quibusdam, voluptatem ducimus. Praesentium, ipsa iusto mollitia ipsam ratione sed.
+    Delectus similique dignissimos id minus facere voluptatibus obcaecati dicta libero dolorem possimus, odio molestiae blanditiis sit rem nihil itaque sapiente velit vero architecto enim adipisci sint! Non quia eligendi incidunt!
+    </p>
+    <button id="change">change</button>
+    <script>
+        const para = document.getElementById("para");
+        const change = document.getElementById("change")
+
+        change.addEventListener("click",function(){
+            para.innerText = "Paragraph is good"
+        })
+         </script>
+    <!-- task-2 -->
+     <img src="1.jpeg" alt="" id="img">
+         <script>
+     const  image = document.getElementById("img");
+            image.addEventListener("dblclick",function(){
+                image.style.display = "none";
+            })</script>
+           
+            <!-- // task-3 -->
+        <div id="div">hello</div>
+        <script>
+            const divs = document.getElementById("div");
+            divs.addEventListener("mouseover",function(){
+                divs.style.backgroundColor = "red";
+            })
+            </script>
+
+            <!-- task-4 -->
+             <script>
+                const mouseout = document.getElementById("div")
+                mouseout.addEventListener("mouseout",function () {
+                    mouseout.style.backgroundColor = "yellow"
+                })
+             </script>
+
+             <!-- task-5 -->
+              <input type="text" id="text">
+              <script>
+                const text = document.getElementById("text");
+                text.addEventListener("keydown",function () {
+                    console.log("keydown");
+                })
+              </script>
+
+              <!-- task-6 -->
+               <!-- Input field -->
+<input type="text" id="text">
+
+<!-- Paragraph to display input -->
+<p id="keyup"></p>
+
+<script>
+  const input = document.getElementById("text");
+  const output = document.getElementById("keyup");
+
+  input.addEventListener("keyup", function () {
+    output.innerText = input.value;
+  });
+</script>
+        
+
+
+<br><br><br><br><br><hr>
+<form id="myForm">
+  <p>Name</p><input type="text" id="name">
+  <p>Email</p><input type="text" id="email">
+  <button type="submit">Submit</button>
+</form>
+
+
+<script>
+    const form = document.getElementById("myForm")
+    const name = document.getElementById("name")
+    const email = document.getElementById("email")
+
+    form.addEventListener("submit",function(e){
+        e.preventDefault()
+        console.log(name.value);
+        
+    })
+</script>
+<!-- task-10 -->
+    <ul id="myList">
+  <li>Apple</li>
+  <li>Banana</li>
+  <li>Mango</li>
+</ul>
+
+<script>
+  const list = document.getElementById("myList");
+
+  list.addEventListener("click", function(event) {
+    if (event.target.tagName === "LI") {
+      console.log(event.target.innerText);  // Logs the clicked item’s text
+    }
+  });
+</script>
+
+
+<select name="" id="select">
+    <option value="ahmedabad">ahmedabad</option>
+    <option value="mumbai">mumbai</option>
+    <option value="delhi">delhi</option>
+    </select>
+    <p id="city">city</p>
+    <script>
+       const select = document.getElementById("select")
+       const city = document.getElementById("city")
+        select.addEventListener("change",function(){
+            city.innerText = select.value;
+        })
+    </script>
+
+  
+</body>
+</html>
